@@ -1,0 +1,41 @@
+.ul1{
+	margin: 0px;
+	padding: 0rem;
+}
+.li1{								/*设计最顶部列表项形式*/
+	height: 30px;			
+	width:115px;	
+	list-style: none;				/*去除列表头符号*/
+	float:left;						/*竖向列表改横向*/
+	display: inline;				/*行内显示*/
+	font: 0.9em arial,helvetica,sans-serif;/*设定内部字体样式*/
+}
+.a1{	/*设定超链接的样式*/
+	color:#FFFFFF;
+	width: 113px;
+	margin: 0rem;			/*无边界*/
+	padding: 0px 0px 0px 8px;	/*内填充宽度*/
+	text-decoration: none;
+	display: block;			
+	background:#808080;
+	line-height: 29px;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px soild #cccccc;
+}
+.li2{	/*设定二级列表的样式*/
+	height:25px;
+}
+.a2{	/*设定二级列表中的超链接样式*/
+	background:#666666;
+	line-height: 24px;
+}
+ul li a:hover{	/*定义鼠标滑过时的动作*/
+	background:#666666;
+	border-bottom: 1px dashed #FF0000;
+}
+.lu2{
+	visibility: hidden;	/*定义二级列表初始状态为 隐藏*/
+}
+ul li:hover ul{
+	visibility: visible;	/*定义鼠标滑过时下拉子菜单的显示样式*/
+}
