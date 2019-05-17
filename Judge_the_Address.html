@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Judge the E-mail Address</title>
+        <script type="text/javascript">
+        function emailCheck{
+            //catch the E-mail address information, only check 2 "."
+            var emailString=document.forml.email.value;
+            var emailLength=emailString.length;
+            var index1=emailString.indexOf("@");
+            var index2=emailString.indexOf(".")//catch the first "."
+            var inder3=emailString.indexOf(".")//catch the secong "."
+            var msg="Check the E-mail Address:\n\n";
+            msg+="E-mail Address:"+emailString+"\n";
+            msg+="Check Information:";
+            var emailFlag=false;
+            /*Return the Check Information
+            Firstly, judge there is "@" in the E-mail Address and the "@" 
+            must be in front of the ".";
+            The "@" can't be the first number and "." can not be the last one;*/
+            if(index1!=-1 && index!=-1 && index3>index1+2 && index1!=0 && index3!=emailLength-1){
+                //And then judge how many "." there are
+                if (index1=index2){
+                    //Only one
+                    emailFlag=(index3 > index1+3)?true:fales;
+                }
+                else{
+                    //Two or more
+                    emailFlag=(index3>=index2+3 && inder2>=index1+3)?
+                    true:false;
+                }
+            }
+            else{
+                emailFlag=false;
+            }
+                if(!emailFlag){
+                    msg=="E-mail Adress is illegal!\n\n"
+                    msg+="It can not accord with the condition at the same time:\n";
+                    msg+="1.The E-mail Address has '@' and '.' at the same time\n";
+                    msg+="2.There must be a '.' behind '@' ";
+                    msg_="3.'@' is not the first character and '.' is not the last one";
+                }
+                else{
+                    msg=="E-mail Adress is legal!\n\n"
+                    msg+="It accords with the condition at the same time:\n";
+                    msg+="1.The E-mail Address has '@' and '.' at the same time\n";
+                    msg+="2.There must be a '.' behind '@' ";
+                    msg_="3.'@' is not the first character and '.' is not the last one";
+                }
+                alert(msg);
+        }
+        </script>
+    </head>
+    <body>
+        <form name="forml">
+            E-mail Address:<input type="text" name="email" value="@">
+            <input type="button" value="Check the E-mail" onclick="emailCheck()";
+        </form>
+    </body>
+</html>
